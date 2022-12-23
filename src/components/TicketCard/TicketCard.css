@@ -1,0 +1,118 @@
+.ticket {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 5px;
+    background: white;
+}
+
+.ticket:hover {
+    box-shadow: 0 4px 20px 5px #d3dfe7;
+}
+
+.ticket .ticket__purchase {
+    border-right: 1px solid #ecebeb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticket__purchase .btn {
+    border-radius: 5px;
+    border: none;
+    background: rgb(255 109 0);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.ticket__purchase .btn:hover {
+    background: rgb(255 129 36);
+}
+
+.ticket .ticket__details {
+    padding: 20px;
+}
+
+.ticket__duration {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket__time {
+    font-size: 30px;
+    opacity: 0.7;
+}
+
+.ticket .destination__name {
+    font-weight: 600;
+}
+
+.ticket .destination__date, .ticket .destination__name {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.destination__date {
+    color: #b5bbbd;
+}
+
+.text-align__right {
+    text-align: right;
+}
+
+.ticket__stops {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket__stops span {
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    opacity: 0.7;
+    line-height: 26px;
+}
+
+.stops-line {
+    position: relative;
+    display: flex;
+    color: rgb(210 213 214);
+    align-items: center;
+    font-size: 22px;
+    line-height: 18px;
+    width: calc(100% / 3);
+    border-bottom: 1px solid;
+}
+
+.stops-line:after {
+    content: '✈';
+    display: inline;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 16px;
+    right: -10px;
+    bottom: 0;
+    line-height: 21px;
+}

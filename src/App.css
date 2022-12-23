@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    padding: 0;
+    margin: 0;
+    background: #f3f7fa;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header img {
+    filter: drop-shadow(0 10px 10px #b0c2d3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-content {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.options-sidebar {
+    border-radius: 5px;
+    background: white;
+    min-width: 250px;
+    max-height: 400px;
+}
+
+.options-sidebar .sidebar-header {
+    opacity: 0.6;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.currency-options {
+    padding: 0 15px 15px;
+}
+
+.tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.currency-btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.currency-btn {
+    background: white;
+    border: 1px solid #d7dadb;
+    color: rgb(33 150 243);
+    cursor: pointer;
+    padding: 12px 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.currency-btn:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.currency-btn:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.currency-btn:not(.currency-btn:first-child) {
+    margin-left: -1px;
+}
+
+.currency-btn.selected {
+    background: rgb(33 150 243);
+    border-color: rgb(33 150 243);
+    color: white;
+}
+
+.currency-btn:hover {
+    border-color: rgb(33 150 243);
+    background: rgb(242 252 255);
+    z-index: 2;
+}
+
+.currency-btn:hover input {
+    border-color: rgb(33 150 243);
+}
+
+.stops-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.stops-options .sidebar-header {
+    padding-left: 15px;
+}
+
+.stops-option {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+.stops-option label, .stops-option input {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.stops-option:hover {
+    background: rgb(242 252 255);
+}
+
+.stops-line div {
+    border: 1px solid rgb(210 213 214);
+    width: 100%;
 }
