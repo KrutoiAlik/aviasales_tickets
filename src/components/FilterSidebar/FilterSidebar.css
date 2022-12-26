@@ -1,0 +1,65 @@
+.options-sidebar {
+    border-radius: 5px;
+    background: white;
+    min-width: 250px;
+    max-height: 400px;
+}
+
+.options-sidebar .sidebar-header {
+    opacity: 0.6;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.currency-options {
+    padding: 0 15px 15px;
+}
+
+.currency-btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.currency-btn {
+    background: white;
+    border: 1px solid #d7dadb;
+    color: rgb(33, 150, 243);
+    cursor: pointer;
+    padding: 12px 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.currency-btn:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.currency-btn:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.currency-btn:not(.currency-btn:first-child) {
+    margin-left: -1px;
+}
+
+.currency-btn.selected {
+    background: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
+    color: white;
+}
+
+.currency-btn:hover {
+    border-color: rgb(33, 150, 243);
+    background: rgb(242, 252, 255);
+    color: rgb(33, 150, 243);
+    z-index: 2;
+}
+
+.currency-btn:hover input {
+    border-color: rgb(33, 150, 243);
+}

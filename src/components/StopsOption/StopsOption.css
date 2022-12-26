@@ -1,0 +1,39 @@
+.stops-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.stops-options .sidebar-header {
+    padding-left: 15px;
+}
+
+.stops-option {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+.stops-option label, .stops-option input {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.stops-option:hover {
+    background: rgb(242, 252, 255);
+}
+
+.stops-option:hover .only-this-option__btn {
+    opacity: 0.8;
+}
+
+.only-this-option__btn {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(33, 150, 243);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
