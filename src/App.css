@@ -55,7 +55,7 @@ body {
 .currency-btn {
     background: white;
     border: 1px solid #d7dadb;
-    color: rgb(33 150 243);
+    color: rgb(33, 150, 243);
     cursor: pointer;
     padding: 12px 15px;
     font-family: 'Inter', sans-serif;
@@ -78,19 +78,20 @@ body {
 }
 
 .currency-btn.selected {
-    background: rgb(33 150 243);
-    border-color: rgb(33 150 243);
+    background: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
     color: white;
 }
 
 .currency-btn:hover {
-    border-color: rgb(33 150 243);
-    background: rgb(242 252 255);
+    border-color: rgb(33, 150, 243);
+    background: rgb(242, 252, 255);
+    color: rgb(33, 150, 243);
     z-index: 2;
 }
 
 .currency-btn:hover input {
-    border-color: rgb(33 150 243);
+    border-color: rgb(33, 150, 243);
 }
 
 .stops-options {
@@ -104,7 +105,7 @@ body {
 
 .stops-option {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     gap: 5px;
     padding: 5px 15px;
     transition: background-color 0.3s;
@@ -116,10 +117,24 @@ body {
 }
 
 .stops-option:hover {
-    background: rgb(242 252 255);
+    background: rgb(242, 252, 255);
+}
+
+.stops-option:hover .only-this-option__btn {
+    opacity: 0.8;
 }
 
 .stops-line div {
-    border: 1px solid rgb(210 213 214);
+    border: 1px solid rgb(210, 213, 214);
     width: 100%;
+}
+
+.only-this-option__btn {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(33, 150, 243);
+    opacity: 0;
+    transition: opacity 0.3s;
 }

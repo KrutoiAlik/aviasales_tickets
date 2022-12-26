@@ -46,6 +46,7 @@ function App() {
     }
 
     const updateStopFilters = (e: ChangeEvent<HTMLInputElement>) => {
+
         if (e.target.checked) {
             setStopFilters(prev => [...prev, +e.target.value]);
         } else {
@@ -59,23 +60,34 @@ function App() {
 
         const stopOptions: JSX.Element[] = [
             <div className='stops-option'>
-                <input id='allStops'
-                       className='checkbox'
-                       checked={!stopFilters.length}
-                       type='checkbox'
-                       onChange={(e) => setStopFilters([])}/>
-                <label htmlFor='allStops'>Все</label>
+                <div>
+                    <input id='allStops'
+                           className='checkbox'
+                           checked={!stopFilters.length}
+                           type='checkbox'
+                           onChange={(e) => setStopFilters([])}/>
+                    <label htmlFor='allStops'>Все</label>
+                </div>
+                <div>
+                    <span className='only-this-option__btn'>ТОЛЬКО</span>
+                </div>
             </div>
         ];
 
         allStops.forEach(stops => {
             stopOptions.push(<div className='stops-option'>
-                <input id={`stops_${stops}`}
-                       className='checkbox'
-                       value={stops}
-                       checked={stopFilters.includes(stops)}
-                       type='checkbox' onChange={updateStopFilters}/>
-                <label htmlFor={`stops_${stops}`}>{stopsMessage(stops)}</label>
+                <div>
+                    <input id={`stops_${stops}`}
+                           className='checkbox'
+                           value={stops}
+                           checked={stopFilters.includes(stops)}
+                           type='checkbox' onChange={updateStopFilters}/>
+                    <label htmlFor={`stops_${stops}`}>{stopsMessage(stops)}</label>
+                </div>
+                <div>
+                    <span className='only-this-option__btn'
+                          onClick={(e) => setStopFilters([stops])}>ТОЛЬКО</span>
+                </div>
             </div>);
         })
 
